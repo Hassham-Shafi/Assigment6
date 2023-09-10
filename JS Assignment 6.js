@@ -15,35 +15,33 @@ for (var i = 1; i <= 10; i++) {
 var TableNum = prompt('Multiplication table of : ')
 var TableLenght = prompt('Lenght : ')
 for (var i = 1; i <= TableLenght ; i++) {
-    alert(TableNum+' x '+i+ ' = '+TableNum*i )
+  console.log(TableNum+' x '+i+ ' = '+TableNum*i )
 }
 
 //4. You have an array A = [“Nokia”, “Samsung”, “Apple”, “Sony”, “Huawei”] Write each element on new line with the help of for loop.
 
 var Mobile =  ['Nokia','Samsung','Apple','Sony','Huawei']
 for (var i = 0; i < Mobile.length ; i++) {
-    alert(Mobile[i])
+    console.log(Mobile[i])
 }
 
 // 5. Write a program to print items of the following array using for loop: fruits = [“apple”, “banana”, “mango”, “orange”, “strawberry”]
 
 var fruits = ['apple','banana','mango','orange','strawberry']
 for (var i = 0; i < fruits.length ; i++) {
-    alert('Element at index '+i+' is '+fruits[i] )
+    console.log('Element at index '+i+' is '+fruits[i] )
 }
 
 //6. Write a program to initialize an array of N items by using prompt. Where N is number of items as entered by the user.
 
-var numOfItems = +prompt("Enter number of Items");
-var index0 = prompt("Enter value for Index 0");
-var index1 = prompt("Enter value for Index 1");
-var index2 = prompt("Enter value for Index 2");
-var index3 = prompt("Enter value for Index 3");
-
-var arr = [index0, index1, index2, index3];
-for (i = 0; i<=numOfItems; i++)
-document.write(arr[i]+"<br>");
-document.write("Number of Items: "+numOfItems+" Items "+"<br>");
+var items =[]
+var itemNumber = prompt('Enter number of item')
+for (var i = 0; i < itemNumber; i++) {
+  var item = prompt('Enter item '+(i+1)+': ')
+  items.push(item)
+  console.log(items[i])
+  
+}
 
 //7. Generate the following series in your browser. See example output.
 // a. Counting: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15
@@ -130,15 +128,15 @@ for (var i = 1; i < A.length; i++) {
         smallest = A[i]
     }
 }
-document.write('The largest number in the array is:  '+largest)
-document.write('The smallest number in the array is:  '+smallest)
+console.log('The largest number in the array is:  '+largest)
+console.log('The smallest number in the array is:  '+smallest)
 
 //12. Write a program to print multiples of 5 ranging 1 to 100
 
 for (var i = 1; i <= 100; i++) {
    
     if (i % 5 === 0) {
-      document.write(i," "); 
+      console.log(i); 
     }
   }
   
@@ -150,7 +148,26 @@ for (var i = 0; i < students.length; i++) {
     document.write( ' '+students[i] + " : " + scores[i]);
   }
   
+// 14. Write a program that prints number from start of the array to desired stop value. Given array:
+// var scores = [12, 45, 3, 22, 34, 50];
+// (Hint: take stop value from user)
+// E.g. if user gives 3 as input value print 12, 45, 3
+// if user gives 34 as input value print 12, 45, 3, 22, 34
 
+var scores = [12, 45, 3, 22, 34, 50];
+var userInput = prompt('Enter any number from the array!') //3
+
+for(var i = 0; i < scores.length; i++) {
+    console.log(scores[i])
+
+    if (userInput == scores[i]) {
+        break;
+    }
+}
+
+// 15. You have an array
+// A = [ [1,2,3] , [4,5,6] , [7,8,9] ]
+// Write each element on new line with the help of nested for loops.
 
 var A = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
 
@@ -190,7 +207,6 @@ document.write("The product of the odd integers from 1 to 7 is:", product);
 
 //19. Write a program that will write out a wedge of stars. The user will enter the initial number of stars, and the program will write out lines of stars where each line has one few star than the previous line. Initial number of stars: 7
 
-
 var initialStars = prompt('Enter the initial number of stars:');
 
 
@@ -199,12 +215,40 @@ var initialStars = prompt('Enter the initial number of stars:');
     for (var j = 1; j <= i; j++) {
       line += '*';
     }
-    document.write(line+'<br>');
+    console.log(line);
   }
 
   //20. Write a program to create the following patterns in your browser. Take number of lines as an input.
 
+  for (var i = 4; i >= 1; i--) {
+    var line = '';
+    for (var j = 1; j <= 5; j++) {
+      line += '*';
+    }
+    console.log(line);
+  }
 
+
+
+
+  for (var i = 1; i <= 5; i++) {
+    var line = '';
+    for (var j = 1; j <= i; j++) {
+      line += '*';
+    }
+    console.log(line);
+  }
+
+
+
+
+  for (var i = 5; i >= 1; i--) {
+    var line = '';
+    for (var j = 1; j <= i; j++) {
+      line += '*';
+    }
+    console.log(line);
+  }      
 
   
  
